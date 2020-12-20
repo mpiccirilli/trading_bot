@@ -12,7 +12,7 @@ An example of the bots general processes
 - 9:30:00, market opens 
 - 9:30:01, get current market prices, calculate metrics
 - 9:30:20, finished calculating trade metrics, start sending orders
-- ~9:30:30, finished sending _N_ buy/sell orders
+- 9:30:21 - 9:30:50, finished sending _N_ buy & sell orders
 
 
 ## Strategy / Algorithm
