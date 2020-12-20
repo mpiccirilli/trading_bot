@@ -1,0 +1,16 @@
+pandas==1.1.1
+numpy==1.19.2
+scipy==1.5.2
+requests==2.24.0
+python-dateutil
+sendgrid
+lxml==4.5.2
+beautifulsoup4==4.9.3
+asyncio==3.4.3
+aiohttp==3.6.2
+async-timeout==3.0.1
+attrs==19.3.0
+chardet==3.0.4
+multidict==4.7.6
+yarl==1.5.1
+pandas_gbq==0.14.0
