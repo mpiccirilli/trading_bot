@@ -29,6 +29,8 @@ This is a Long-Only strategy and each stock is weighted the same.  This means th
 
 The way that Google Cloud Funcions are triggered is that they receive a 'message' that is sent to them from a scheduler into the `main.py` file. Therefore `main.py` is the entry point of the bot, and the heart of the bot is in the `utils.py` file. 
 
+- The `main.py` is the entry point of the bot. There are several messages that are currently sent: 1) Check for ticker changes in the index, 2) Find and executing the trades, 3) Submit executed trades to the DB, 4) Shut it all down, sell everything, and 5) Get a new refresh token for the API, which expires every 90 days. 
+ -- 
 - The `utils.py` file contains the functions to pull the quotes, calculate the historical metrics to make trade decisions, as well as the functions that send the buy/sell orders.  
 - The `emails.py` contains functions for sending email notifications.  I'm currently sending emails a few times throughout the day that show executed trades - this captures any trades the bot executes as well as any descretionary trades I place through the TDA website. I also send emails when the composition of the S&P 500 index changes. 
 - The `db.py` file contains helper functions for saving data to Google BigQuery.  I'm currently only saving orders to BigQuery, however it can be used to save other data such as the current S&P 500 tickers as well as TDA credentials which change every 90 days. 
